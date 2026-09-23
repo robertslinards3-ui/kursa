@@ -2,6 +2,8 @@
 
 Plānošanas mape. Koda vēl nav. Pieteikums LU pirmsinkubācijai (MoneyLab) jāiesniedz līdz **27.09.2026. plkst. 23:59**.
 
+**Kopīgais darbu saraksts ar atzīmēm:** https://claude.ai/artifact/8Cufb9nBRmZk6ppiHixwkW
+
 ## Ar ko sākt (Robertam)
 
 1. **[TIRGUS_IZPETE.md](TIRGUS_IZPETE.md)**: kas jau eksistē (Planlogi, Mapon u.c.) un kāpēc piedāvāju produktu sašaurināt līdz "CMR foto → rēķins → samaksāts". **Tas ir priekšlikums, par kuru jālemj mums abiem.**
