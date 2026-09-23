@@ -151,6 +151,16 @@ def fill_budget_sheet(ws):
     for col, width in {"C": 30, "D": 14, "E": 12, "F": 20, "G": 40, "H": 16}.items():
         ws.column_dimensions[col].width = width
 
+    # LU zemsvītras piezīmes (6–11): teksts paliek, bet tiek ietīts tabulas platumā
+    for rng in list(ws.merged_cells.ranges):
+        if rng.min_row >= 34:
+            ws.unmerge_cells(str(rng))
+    for r in range(34, 41):
+        if ws[f"B{r}"].value:
+            ws.merge_cells(f"B{r}:H{r}")
+            ws[f"B{r}"].alignment = WRAP
+            ws.row_dimensions[r].height = 15 * math.ceil(len(str(ws[f"B{r}"].value)) / 150)
+
 
 def build_item_sheet(wb, template, key, spec):
     ws = wb.copy_worksheet(template)
