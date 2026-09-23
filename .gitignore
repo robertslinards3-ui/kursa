@@ -1,0 +1,11 @@
+# Office lock/temp files
+~$*
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+
+# Future: real CMR photos contain personal data - never commit them
+cmr-paraugi/
+izdevumi/
