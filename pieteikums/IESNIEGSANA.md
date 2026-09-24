@@ -6,24 +6,28 @@ Anketa: https://inovacijas.lu.lv/studentiem/programmas/pirmsinkubacijas-programm
 
 | # | Fails | Statuss |
 |---|---|---|
-| 1 | Pieteikuma veidlapa (.pdf vai .docx) | Melnraksts ir `Pieteikuma_Anketa_AIZPILDITA.docx`. Jāaizpilda `[KVADRĀTIEKAVAS]`, jāpārlasa un jāsaglabā PDF |
-| 2 | Budžeta veidlapa (.pdf vai .xlsx) | Melnraksts ir `Budzeta_veidlapa_AIZPILDITA.xlsx`, lapa "Budžeta lapa" |
+| 1 | Pieteikuma veidlapa (.pdf vai .docx) | `../Kursa_PieteikumaAnketa.docx`. Jāaizpilda kompetences, pienākumi, motivācija, ietekme, darba grafiks un rūtiņas, tad jāsaglabā PDF |
+| 2 | Budžeta veidlapa (.pdf vai .xlsx) | `Budzeta_veidlapa.xlsx`, lapa "Budžeta lapa". **Jāsaskaņo ar anketu** (sk. ../PROJECT.md) |
 | 3 | Excel ar budžeta pielikumiem (cenu aptaujas, ekrānšāviņi) | Tas pats .xlsx, pozīciju lapas 1.1–1.4 Ekrānšāviņi jau ielikti (23.09.2026.) |
 
-Anketas laukos jāieraksta: vārds, uzvārds, e-pasts, tālrunis, komandas nosaukums, programmas virziens (**MoneyLab**) un apliecinājumu rūtiņas.
+Anketas laukos jāieraksta: vārds, uzvārds, e-pasts, tālrunis, komandas nosaukums, programmas virziens (**Idea to Impact**, kā anketā) un apliecinājumu rūtiņas.
 
 ## Darāmo saraksts
 
 ### Jāizlemj abiem
-- [ ] **Produkta fokuss:** "CMR foto → rēķins → samaksāts" (sk. ../TIRGUS_IZPETE.md). Ja nepiekrītat, iepriekšējā versija (pilns TMS) ir mapē `arhivs/`
-- [ ] **Komandas nosaukums**
-- [ ] **Virziens:** MoneyLab (ieteikums) vai Idea to Impact
+- [x] **Komandas nosaukums:** Kursa
+- [x] **Virziens:** Idea to Impact
 - [ ] Vai abi pašlaik esat **matrikulēti studenti**? Tas ir obligāti visiem dalībniekiem.
 
 ### Pieteikuma veidlapa
-- [ ] Katram: augstskola, studenta apliecības nr., līmenis, programma, tālrunis, e-pasts
-- [ ] Pārrakstīt savos vārdos laukus "Kompetences", "Motivācija" un "Ietekme uz izaugsmi" (atzīmēti `[PIELĀGOT]`)
-- [ ] Labot `PIETEIKUMS.md` → `python aizpildit.py` → pārlasīt .docx → saglabāt PDF
+Anketa ir `../Kursa_PieteikumaAnketa.docx`.
+
+- [x] Katram: augstskola, studenta apliecības nr., līmenis, programma, tālrunis, e-pasts
+- [ ] Katram: kompetences, pienākumi komandā, motivācija, ietekme uz izaugsmi
+- [ ] Darba grafiks 1.–4. mēnesim ar katra individuālajiem mērķiem (mērķi ir ../PLAN.md 1. un 5. sadaļā)
+- [ ] 7 apliecinājumu rūtiņas
+- [ ] Izlemt par 2 avotu neatrastiem apgalvojumiem ("~10% tikai eCMR", "IRU 3–4 reizes"), sk. ../PROJECT.md
+- [ ] Pārlasīt un saglabāt PDF
 
 ### Budžeta pielikumi
 

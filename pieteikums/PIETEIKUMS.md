@@ -1,3 +1,5 @@
+> **NOVECOJIS (2026-09-24).** Komanda uzrakstīja savu anketu `../Kursa_PieteikumaAnketa.docx`, un iesniedzam to. Šis ir Claude melnraksts atsaucei.
+
 # LU pirmsinkubācijas pieteikums: teksta avots
 
 > Šis ir pieteikuma veidlapas ([Pieteikuma_Anketa.docx](Pieteikuma_Anketa_AIZPILDITA.docx))

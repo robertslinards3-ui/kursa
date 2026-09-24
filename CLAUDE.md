@@ -13,34 +13,36 @@ The folder name `ops-panel` is historical — see below.
 
 ## What this actually is
 
-An application to the LU (University of Latvia) 4-month pre-incubation programme (MoneyLab
-fintech track recommended): 2-person team (the user + partner Roberts, aka "Matjas"), funding up
-to €3,506 with a 3-supplier price survey per budget line, application deadline 2026-09-27 23:59.
-The submission kit (filled LU forms + generator scripts) lives in `pieteikums/`.
+Team **Kursa** — **Roberts Linards** (the user, LU E-Bizness) and **Roberts Kaņepons** (partner,
+aka "Matjas", GitHub Matjas01, LU Finanšu menedžments) — applying to the LU 4-month
+pre-incubation programme, track **"Idea to Impact"**, funding up to €3,506 per team,
+deadline 2026-09-27 23:59.
 
-**Chosen direction since 2026-09-23: Option A — freight, narrowed to "CMR photo → invoice →
-paid"** for small Latvian hauliers (5–50 trucks): photo of the signed paper CMR → Claude reads the
-fields → human confirms → invoice PDF + export to the carrier's accounting program → payment
-tracking/reminders. The full-TMS idea was dropped after competitor research (Planlogi, Mapon,
-Dashdoc… already do it) — see [`TIRGUS_IZPETE.md`](TIRGUS_IZPETE.md) and PROJECT.md decision #3.
-Full original vision: [`freight-platform-option.md`](freight-platform-option.md); execution plan:
-[`PLAN.md`](PLAN.md); budget: [`BUDZETS.md`](BUDZETS.md).
+**The founders' own form [`Kursa_PieteikumaAnketa.docx`](Kursa_PieteikumaAnketa.docx) is the source
+of truth** (read 2026-09-24). Don't edit it unless asked; make every other file follow it. Kursa is
+an AI platform for Baltic SME hauliers (5–100 trucks, Baltic–Nordic corridor): order intake from
+e-mails/PDFs → pricing → planning → eCMR/CMR photo → invoice in the customer country's e-invoice
+format (LV Peppol, NO EHF) → compliance; "the human approves". The MVP is only the 1–2
+highest-saving functions, chosen after interviews and shadowing a dispatcher. Goals: 15+
+interviews (carriers and forwarders), first prototype, tests with 2–3 carriers, business model and
+pricing. See PROJECT.md and PLAN.md.
 
-Important fact already checked: the EU eFTI regulation is **voluntary for hauliers** (mandatory
-only for authorities to accept). The real "must" is Latvian B2B e-invoicing from 2028-01-01.
-Don't let pitch text slip back to "carriers must digitise twice".
+Claude's earlier proposal to narrow the whole product to "CMR photo → invoice" (PROJECT.md,
+decision #3) was **not adopted**; the competitor research in [`TIRGUS_IZPETE.md`](TIRGUS_IZPETE.md)
+still applies (Planlogi, Mapon, Dashdoc already sell full TMS).
 
-**Parked: Option B** — live operations map (drones, LoRa trackers, search & rescue),
-[`ops-panel-option.md`](ops-panel-option.md). It was the choice before 2026-09-23. Not dead;
-don't delete it.
+Checked facts: eFTI is voluntary for hauliers (authorities must accept from 2027-07-09); LV B2B
+e-invoices 2028-01-01; NO B2B e-invoice issuance 2027-01-01. Two claims in the form have no source
+yet (see PROJECT.md) — don't repeat them elsewhere until sourced.
+
+**Parked: Option B** — live operations map (drones, LoRa, search & rescue),
+[`ops-panel-option.md`](ops-panel-option.md). Not dead; don't delete it.
 
 ## The validation gate — matters more than code right now
 
-`PROJECT.md` has two unchecked gates: 15 interviews with small hauliers (fewer than 3 pilot
-yeses → stop and rethink) and a technical test (Claude reads ≥ 90% of invoice fields on 30 real
-CMR photos). If the user asks for help with outreach, interview scripts, or
-synthesising interview notes, that work is at least as important as code. Don't let "let's start
-building" quietly skip past it.
+The plan starts with 15 interviews and dispatcher shadowing; the MVP functions are chosen only
+after that. If the user asks for help with outreach, interview scripts, or synthesising interview
+notes, that work is at least as important as code.
 
 ## Budget and reporting
 
@@ -59,8 +61,9 @@ platform — don't merge work between them without asking.
 
 - Language: the user writes in Latvian. `PROJECT.md` and this file are in English;
   team/LU-facing documents (`PLAN.md`, `BUDZETS.md`) are in Latvian.
-- No GitHub repo exists yet — don't create one unprompted.
+- Local git repo exists; no GitHub remote yet (waiting for the user to create a private repo).
 - Keep `PROJECT.md`'s checkboxes and open questions current.
-- Scope discipline: v1 is only CMR photo upload + AI extraction + invoice/export + payment
-  tracking. No dispatch board, driver app, own e-CMR or own Peppol delivery. Weigh new scope
-  against "two people, 4 months" and against what competitors already do (TIRGUS_IZPETE.md).
+- Scope discipline: the MVP is 1–2 of the form's six functions, not the platform. Weigh new
+  scope against "two people, 4 months" and against what competitors already do (TIRGUS_IZPETE.md).
+- `pieteikums/PIETEIKUMS.md` + `aizpildit.py` were Claude's draft of the form; the founders wrote
+  their own form instead. Don't regenerate or submit the draft docx.

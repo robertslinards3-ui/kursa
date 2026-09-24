@@ -1,139 +1,112 @@
-# Freight platform — LU incubation application
+# Kursa — LU pre-incubation application
 
-> Two people (you + partner Roberts, aka "Matjas" — same partner as DroneSim), applying to the
-> LU (University of Latvia) **pre-incubation programme** (4 months; organised by LU Inovāciju un
-> akselerācijas centrs, ERAF project Nr. 1.1.1.7/1/25/A/005). **Application deadline:
-> 2026-09-27 23:59.** Funding up to **€3,506** (expert fees, materials & services, mobility) —
-> every euro must be justified with a 3-supplier price survey and reported afterwards.
+> Team **Kursa**: **Roberts Linards** (the user; LU, E-Bizness, bachelor) and **Roberts Kaņepons**
+> (partner, aka "Matjas", GitHub Matjas01, same partner as DroneSim; LU, Finanšu menedžments,
+> bachelor). Applying to the LU pre-incubation programme, track **"Idea to Impact"**, RIS3 area
+> ICT (4 months; LU Inovāciju un akselerācijas centrs, ERAF project Nr. 1.1.1.7/1/25/A/005).
+> **Application deadline: 2026-09-27 23:59.** Funding up to **€3,506 per team**; every budget
+> line needs a 3-supplier price survey or a uniqueness justification and is reported afterwards.
 > Also available: €280/month stipend per student, €5,000 Demo Day prize fund.
-> This file is the decision record — update it as choices firm up.
 >
-> (The folder is still called `ops-panel` from the earlier direction; the project is now the
-> freight platform.)
+> **Source of truth for what we promise LU: the founders' own form
+> [`Kursa_PieteikumaAnketa.docx`](Kursa_PieteikumaAnketa.docx)** (read 2026-09-24). Do not edit it
+> unless the user asks. Everything else in this repo must follow it.
+>
+> (The folder is still called `ops-panel` from an earlier direction.)
+
+## What Kursa is (from the form, 2026-09-24)
+
+An AI platform for road-haulage companies that takes a load from request to invoice in one flow;
+the dispatcher checks and approves instead of typing ("cilvēks apstiprina"). Works alongside the
+company's existing tools (telematics, freight exchanges, accounting software).
+
+1. **Order intake** — reads load requests from e-mails/PDFs/exchanges in any language → structured order
+2. **Pricing** — route, tolls, fuel, margin → draft quote
+3. **Planning** — suggests truck/driver (location, remaining hours, trailer type), sends the task
+4. **Digital documents** — driver issues an eCMR on the phone or photographs the signed paper CMR
+5. **Invoice** — generated on confirmed delivery in the customer country's e-invoice format
+   (Latvian Peppol BIS 3.0, Norwegian EHF, via a certified Peppol provider); overdue reminders
+6. **Compliance** — driver hours, cabotage, per diem, CO2 reports
+
+- **Target:** Baltic SME hauliers, ~5–100 trucks, international, especially Baltic–Nordic
+  corridor; users = owner (buyer), dispatcher (daily user), driver (phone). Secondary: small
+  forwarders, Nordic forwarders/shippers working with Baltic carriers.
+- **Market / expansion:** Baltics + Nordics first, then Poland and the rest of the EU; long-term a
+  data-sharing space for carriers, forwarders and shippers (backhaul, emissions reporting).
+- **Stated edges:** underserved SME segment; cross-border e-invoice formats (LV Peppol + NO EHF);
+  works with existing tools; automation instead of data entry; local languages (LV/LT/RU/EN) and
+  hands-on onboarding.
+- **Method:** customer development — problem interviews with owners, dispatchers, accountants;
+  **shadowing a dispatcher**; MVP starting with **1–2 functions that save the most** (not the whole
+  platform); pilots with 2–3 carriers.
+
+## Goals for the 4 months (identical to the form)
+
+1. At least **15 interviews** with carriers **and forwarders** — confirm the main problems and
+   willingness to pay.
+2. **First prototype** of the platform's core functions (MVP = the 1–2 highest-saving functions).
+3. **Start testing with 2–3 carriers** in real working conditions.
+4. **Business model and pricing** based on the test results.
+
+Pilot metrics named in the form: processing time per load, number of document errors, days from
+delivery to invoice.
 
 ## Before the deadline (2026-09-27)
 
-Submission kit is in [`pieteikums/`](pieteikums/) — checklist in
-[`pieteikums/IESNIEGSANA.md`](pieteikums/IESNIEGSANA.md).
+- [x] Team name — **Kursa**; track Idea to Impact; RIS3 ICT (in the form)
+- [x] Personal data for both members (in the form)
+- [ ] Form: **Kompetences, Pienākumi komandā, Motivācija, Ietekme uz izaugsmi** — empty for both
+- [ ] Form: **Darba grafiks** (months 1–4, individual goals per member) — empty
+- [ ] Form: declaration checkboxes (7) — not ticked yet
+- [ ] **Budget no longer matches the form** — see below
+- [ ] Decide on the factual claims flagged below
+- [ ] Ask LU: is a uniqueness justification enough for Claude Max / Claude API credit? Programme dates?
+- [ ] Both confirm they are currently matriculated students
 
-- [x] Application form draft — `pieteikums/PIETEIKUMS.md` → `Pieteikuma_Anketa_AIZPILDITA.docx`
-      (`python aizpildit.py`); personal fields and `[PIELĀGOT]` texts still to fill
-- [x] Budget draft in LU format — `pieteikums/Budzeta_veidlapa_AIZPILDITA.xlsx`
-      (`python budzets.py`), €1,020.31 (Claude Max 2×4 months, server, domain, Claude API credit €100 for CMR extraction; lawyer and fuel dropped 2026-09-23); summary in [`BUDZETS.md`](BUDZETS.md)
-- [x] Screenshots for the price surveys — `pieteikums/ekranuznemumi.py` (Playwright) → embedded
-      by `budzets.py`; still to review, plus Claude billing-page screenshot at purchase
-- [ ] Team name; both confirm they are currently matriculated students
-- [x] €3,506 is per team (confirmed by user, 2026-09-23). Claude Max stays in the budget.
-- [ ] Ask LU: is a uniqueness justification enough for Claude Max and the Claude API credit?
-      Exact programme start/end dates?
+### Budget vs the form
 
-LU confirmed (via user, 2026-09-23): subscriptions are eligible, VAT is eligible, requesting
-less than the maximum is fine.
+The budget in `pieteikums/` (`budzets.py` → the LU .xlsx, now saved by the user as
+`pieteikums/Budzeta_veidlapa.xlsx`; €1,020.31: Claude Max 2×4 mo, VPS, .lv domain, Claude API €100)
+was built for the narrower "CMR photo → invoice" idea. The form additionally names: map/route and
+**toll data services** (e.g. TollGuru ~$80/mo), an **LLM for e-mail/order parsing** (more API use
+than CMR-only), and a **certified Peppol provider** for LV Peppol/NO EHF sending. Which of these
+the MVP needs depends on which 1–2 functions are chosen — decide with the user before changing
+numbers.
 
-## The decision (2026-09-23)
+### Factual claims in the form (checked 2026-09-24)
 
-**Chosen: Option A — freight platform for small Baltic hauliers.** Full spec in
-[`freight-platform-option.md`](freight-platform-option.md). Execution plan in
-[`PLAN.md`](PLAN.md).
+- ✅ Norway: mandatory B2B e-invoice **issuance from 2027-01-01** (EHF; receipt + digital
+  bookkeeping 2030) — confirmed (vatcalc, Sovos, EY).
+- ✅ Latvia B2B e-invoices 2028-01-01 (FM); ✅ eFTI: authorities must accept from 2027-07-09 via
+  certified platforms (the form words this correctly — voluntary for hauliers); ✅ ViDA 2030.
+- ✅ Nordic freight & logistics market **USD 76.38 bn (2025)** — Mordor Intelligence; note it is the
+  whole logistics market, not TMS software spend.
+- ⚠️ "~10% of European carriers work only with eCMR in 2026" — **no source found**; trans.info says
+  eCMR is used in **<1% of operations**.
+- ⚠️ "IRU: eCMR cuts document costs 3–4×" — not found as an IRU figure; trans.info reports ~70%
+  lower document costs (€6.23 → €1.69 per document ≈ 3.7×, automotive survey). IRU's own figure:
+  75–102 M working hours/year saved in Europe.
 
-Originally: a full TMS for a small haulier (dispatch → driver e-CMR → invoice). **Narrowed by
-decision #3 below** to "CMR photo → invoice → paid" after competitor research.
+## History of the direction
 
-Option B (live operations map for search & rescue, drones, LoRa trackers) was the earlier
-choice. The team decided on 2026-09-23 to focus on A instead. B is parked, not deleted:
-[`ops-panel-option.md`](ops-panel-option.md).
-
-### Why A
-
-- Clear buyers who pay monthly (~€30–80 per truck per month), realistic path to first revenue
-  in 3–4 months.
-- A hard regulatory deadline: **Latvian B2B structured e-invoicing (Peppol BIS 3.0) becomes
-  mandatory on 2028-01-01**, including reporting invoice data to VID.
-- Uses the user's finance background (invoicing, payment chasing, per diem).
-
-### Correction to the original pitch (checked 2026-09-23)
-
-The original pitch said carriers "must digitise twice in six months" (eFTI July 2027 + e-invoice
-Jan 2028). **That's only half true.** The eFTI Regulation (EU 2020/1056) obliges *authorities*
-to accept electronic freight data from 2027-07-09; for hauliers it is **voluntary** — they may
-keep using paper. So the pitch must be:
-- e-invoicing 2028 = **mandatory** deadline (the "must")
-- eFTI / e-CMR = **opportunity** (paperless roadside checks, faster cash) — not an obligation
-- Becoming a *certified* eFTI platform requires an accredited conformity assessment body
-  (rules in Implementing Regulation (EU) 2025/2243). Out of scope for the incubator; design the
-  data model to be "eFTI-ready" and decide later whether to certify or integrate with a certified
-  platform.
-
-Also: Latvian accounting software vendors will add e-invoicing themselves, so "we send
-e-invoices" alone is not an edge. The edge is **invoice automatically from the signed delivery**,
-plus local specifics (Latvian accounting integrations, per diem rules, LV/LT/RU/UA driver app).
-
-## Decision #3 — PROPOSED, awaiting confirmation by both founders (2026-09-23): narrow the product
-
-> Status: Claude's recommendation after competitor research. The user and Roberts have **not**
-> confirmed it yet. If they reject it, restore the full-TMS texts from `pieteikums/arhivs/`.
-
-**Read [`TIRGUS_IZPETE.md`](TIRGUS_IZPETE.md) first.** Short version:
-
-- The original v1 (dispatch board + driver app + e-CMR + invoice-from-delivery) **already exists**,
-  including next door: Planlogi (Estonia, 5–100 trucks, from €79/mo), Dashdoc, Impargo, Trans.eu;
-  Mapon (Riga) already gives many Latvian carriers a driver app, GPS and e-CMR integration.
-  "Same thing, but in Latvian" is not a defensible edge.
-- But e-CMR is used in **<1%** of operations — paper CMR is the norm. Nobody offers a simple,
-  Latvian-localised way to go from a **signed paper CMR** to an invoice and a tracked payment.
-- Latvian accounting software (Horizon, Jumis, Tildes) is already doing Peppol/VID e-invoicing,
-  so we don't send e-invoices ourselves — we hand the invoice to their accounting program.
-- Invoice financing on signed delivery already exists (Aria, API-first) — a future partner, not
-  something we build.
-
-**New v1 = "CMR photo → invoice → paid".** The problem (slow cash from delivery to money) and the
-target group (Latvian carriers, 5–50 trucks) are unchanged; the solution got smaller and sharper.
-
-Alternatives considered and why not:
-- *Keep the full TMS* — head-on with Planlogi/Mapon with no real edge; too big for 2 people × 4 months.
-- *Build our own e-CMR* — free open-source (Open Logistics Foundation) and a planned state (LVRTC)
-  solution exist; adoption is <1% anyway.
-- *Go back to Option B* — not triggered; the freight problem is still real, only the wedge moved.
-
-The v1 full-TMS texts are archived in `pieteikums/arhivs/`.
-
-## Scope for v1 (the 4-month programme)
-
-In:
-- Capture: driver or office uploads a photo of the signed CMR (simple web link/PWA, or forward by
-  e-mail) — works with paper CMR and with e-CMR PDFs
-- Extraction: Claude (vision) reads the CMR fields (sender, consignee, places, dates, goods,
-  signatures/stamps present, remarks) → structured data; human confirms/corrects in one screen
-- Invoice draft from the CMR + the customer's rate → PDF + export to the carrier's accounting
-  program (Peppol BIS 3.0 XML / CSV import) — we do **not** run our own Peppol access point
-- Payment tracking: due dates, overdue list, automatic reminders, simple cash-flow view
-
-Out (roadmap only): dispatch board, full driver app, GPS, own e-CMR, own e-invoice delivery,
-route optimisation, tolls, backhaul, tachograph, posting declarations, cabotage, per diem, fuel
-cards, CO2, customer portal, profitability analytics, hardware, eFTI certification, invoice
-financing (partner later, e.g. Aria).
-
-## Validation gates — do these before building much
-
-- [ ] **Customer gate:** 15 interviews with small hauliers (5–50 trucks). If **fewer than 3 agree
-      to a free pilot**, stop and rethink before the build weeks. Also learn: how does the CMR
-      reach the office today (WhatsApp photos?), which tools they already use (Mapon, Planlogi…).
-- [ ] **Technical gate:** collect **30 real signed CMR photos** from interviewees; Claude must read
-      **≥ 90% of the invoice-relevant fields correctly**. If not, the product shifts to
-      "assisted entry" (AI pre-fills, human types the rest) — still useful, weaker pitch.
+- Option B (live operations map, drones, LoRa, search & rescue) — chosen first, parked 2026-09-23:
+  [`ops-panel-option.md`](ops-panel-option.md).
+- Option A (freight platform) chosen 2026-09-23: [`freight-platform-option.md`](freight-platform-option.md).
+- **Decision #3 (Claude's proposal 2026-09-23: narrow to "CMR photo → invoice → paid") — NOT
+  adopted.** The founders' form (2026-09-24) keeps the broad AI platform and narrows only the MVP
+  (1–2 functions chosen after interviews). The competitor research behind the proposal stays
+  valid and useful for the jury: [`TIRGUS_IZPETE.md`](TIRGUS_IZPETE.md) (Planlogi, Mapon, Dashdoc…).
+- eFTI fact (checked 2026-09-23): voluntary for hauliers, mandatory only for authorities to accept.
+  Don't let texts slip back to "carriers must digitise".
 
 ## Open questions / TODO
 
-- [x] Partner — Roberts ("Matjas"), same as DroneSim.
-- [x] Program + deadline — LU pre-incubation, apply by 2026-09-27 23:59. Track: MoneyLab
-      (fintech) recommended — invoicing, payment chasing, future invoice financing.
-- [x] Direction — Option A (2026-09-23).
-- [ ] Team split (proposal in `PLAN.md`) — decide after the application goes in.
-- [x] LU budget rules — 3 categories, 3-supplier price survey per item, VAT and subscriptions
-      eligible, €3,506 per team.
-- [ ] Do we register an SIA now or later? (Needed to sign pilot agreements / invoice customers.)
-- [ ] Legal (post-programme): GDPR for CMR photos (they contain names/signatures of third
-      parties), data-processing agreement with carriers. No lawyer in the LU budget — mentors +
-      DVI guidance during the pilot.
-- [ ] Do we personally know any hauliers? (First interview targets.)
-- [ ] GitHub repo — none yet; create a shared one when coding starts.
+- [ ] Which 1–2 functions form the MVP? (decide after the first interviews; candidates in PLAN.md)
+- [ ] Team split — the form's "Pienākumi komandā" is empty; proposal in PLAN.md
+- [ ] Budget alignment with the form (above)
+- [ ] Do we register an SIA now or later? (pilot agreements, invoicing customers)
+- [ ] Legal (post-programme): GDPR for CMR photos and driver data; data-processing agreements
+- [ ] Do we personally know any hauliers / forwarders? (first interview targets)
+- [x] Local git repo exists (3 commits); GitHub remote — waiting for the user to create a private repo
+- [ ] Shared checklist https://claude.ai/artifact/8Cufb9nBRmZk6ppiHixwkW still has the CMR-only
+      tasks — update to the form's goals if the user wants

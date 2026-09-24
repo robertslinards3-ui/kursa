@@ -1,177 +1,131 @@
-# Darba plāns: "CMR foto → rēķins → samaksāts" (LU pirmsinkubācija)
+# Darba plāns: Kursa (LU pirmsinkubācija, "Idea to Impact")
 
-> Kā mums abiem (tev un Robertam) rīkoties 4 mēnešu LU programmā (MoneyLab).
-> - **Kāpēc produkts ir tieši tāds:** [TIRGUS_IZPETE.md](TIRGUS_IZPETE.md)
+> Plāns seko komandas pieteikuma anketai [Kursa_PieteikumaAnketa.docx](Kursa_PieteikumaAnketa.docx).
+> Ja anketa mainās, jāmaina arī šis plāns.
 > - **Lēmumi un atvērtie jautājumi:** [PROJECT.md](PROJECT.md)
+> - **Konkurenti:** [TIRGUS_IZPETE.md](TIRGUS_IZPETE.md)
 > - **Nauda:** [BUDZETS.md](BUDZETS.md)
-> - **Pieteikuma faili:** [pieteikums/IESNIEGSANA.md](pieteikums/IESNIEGSANA.md)
 >
-> Iepriekšējais plāns (pilns TMS) ir `pieteikums/arhivs/PLAN_v1_pilns_TMS.md`.
+> Iepriekšējie plāni (pilns TMS, pēc tam "CMR foto → rēķins") ir mapē `pieteikums/arhivs/`.
 
-## 1. Ko gribam sasniegt programmas beigās (4. mēnesis, Demo diena)
+## 1. Mērķi 4 mēnešos (tādi paši kā anketā)
 
-| Mērķis | Skaitlis |
+1. **Vismaz 15 intervijas** ar pārvadātājiem un ekspeditoriem. Jāapstiprina galvenās problēmas un gatavība maksāt par risinājumu.
+2. **Pirmais prototips** platformas galvenajām funkcijām. MVP sākas ar **1–2 funkcijām, kas dod vislielāko ietaupījumu**, nevis ar visu platformu.
+3. **Testēšana ar 2–3 pārvadātājiem** reālos darba apstākļos.
+4. **Biznesa modelis un cenu struktūra**, balstoties uz testēšanas rezultātiem.
+
+Pilotā mērām to, ko nosauc anketa:
+
+| Rādītājs | Kā mērām |
 |---|---|
-| Intervijas ar pārvadātājiem (5–50 auto) | **15** |
-| Īsti CMR foto, uz kuriem pārbaudīta AI nolasīšana | **30**, ≥ 90% lauku pareizi |
-| Pārvadātāji, kas pilotā lieto rīku ar reāliem pārvadājumiem | **2–3** |
-| Dienas no piegādes līdz rēķinam pilota klientiem | no **5–15 → 0–1** |
-| Laiks viena rēķina sagatavošanai | no **~10 min → < 2 min** (pārbaudīsim intervijās) |
-| Rakstisks apliecinājums par gatavību maksāt (LOI vai priekšapmaksa) | **≥ 1** |
+| Vienas kravas apstrādes laiks | Minūtes no pieprasījuma līdz apstiprinātam pasūtījumam / rēķinam, pirms un pēc |
+| Kļūdu skaits dokumentos | Laboti lauki un atgriezti rēķini |
+| Dienas no piegādes līdz rēķinam | Datums piegādē un datums rēķinā |
 
-## 2. Divi lēmuma punkti (1. mēneša beigās)
+## 2. Kā izvēlēties 1–2 MVP funkcijas
 
-Programmēšanā ieguldāmies tikai tad, ja abi ir izieti.
+Anketā ir 6 platformas daļas. 4 mēnešos būvējam tikai tās 1–2, kurām intervijās un dispečera vērošanā ir lielākā sāpe. Kandidāti:
 
-| | Nosacījums | Ja neizdodas |
+| Funkcija | Ko ietaupa | Kas pārbaudāms intervijās |
 |---|---|---|
-| **Klientu punkts** | ≥ 3 no 15 pārvadātājiem piekrīt bezmaksas pilotam | Apstājamies. Izvērtējam, kura sāpe intervijās bija lielākā, un maināmies uz to |
-| **Tehniskais punkts** | Claude pareizi nolasa ≥ 90% rēķinam vajadzīgo lauku 30 īstos CMR foto | Rīks kļūst par "palīgu ievadei": AI aizpilda, ko var, un cilvēks pārbauda. Tas joprojām ir noderīgi, taču vēstījums ir vājāks |
+| **Pasūtījuma apstrāde:** e-pasts/PDF → strukturēts pasūtījums | Dispečera laiku, pārrakstīšanas kļūdas | Cik pieprasījumu dienā, kādās valodās, cik minūšu katrs |
+| **Cenas aprēķins:** maršruts, nodevas, degviela, peļņa | Laiku cenas piedāvājumam | Kā šodien rēķina, cik piedāvājumu nedēļā |
+| **Rēķins no piegādes:** CMR foto → rēķins → atgādinājumi | Dienas līdz naudai | Cik dienu līdz rēķinam, kā CMR nonāk birojā |
+| Plānošana, atbilstība (darba laiks, kabotāža, dienas nauda, CO2) | | Visticamāk pēc programmas: sarežģīti un to jau dara TMS (Planlogi, Mapon) |
 
-## 3. Lomas
+**Lēmums 1. mēneša beigās:** kuras 1–2 funkcijas būvējam. Pamats: intervijās visbiežāk minētā un vērošanā izmērītā sāpe.
 
-| | Tu: produkts, klienti, finanses | Roberts: tehnoloģija |
+## 3. Lomas (priekšlikums, jo anketā "Pienākumi komandā" vēl ir tukšs)
+
+| | Roberts Kaņepons (Finanšu menedžments) | Roberts Linards (E-bizness) |
 |---|---|---|
-| Galvenā atbildība | Intervijas, CMR foto vākšana, pilota klienti, rēķinu loģika, biznesa modelis, LU atskaites un izdevumu žurnāls | Arhitektūra, serveris, CMR nolasīšana ar AI un tās precizitātes tests, augšupielāde, drošība |
-| Kodē arī | Rēķina ģenerēšana, eksports grāmatvedībai, maksājumu atgādinājumi | Apstiprināšanas ekrāns, datubāze, izvietošana |
-| Kopā | Pirmās 3 intervijas ejam abi. Roberts dzird problēmu pats, un tehniskos jautājumus var uzdot uzreiz. |
+| Galvenā atbildība | Rēķinu un cenu loģika, biznesa modelis un cenas, sarunas ar grāmatvežiem, LU atskaites un izdevumu žurnāls | Produkts un prototips, digitālie procesi un integrācijas (e-pasts, grāmatvedības programmas), testēšana ar pilota klientiem |
+| Kopā | Intervijas, dispečera vērošana, MVP funkciju izvēle, Demo diena | |
 
-Princips: **katram ir sava joma, par kuru viņš atskaitās.** Ja Roberts ir stiprāks citur, lomas pielāgojam.
+Kurš galvenokārt programmē, jāizlemj jums abiem. No tā atkarīgs arī Claude Max plāns (20x galvenajam izstrādātājam).
 
 ## 4. Darba ritms
 
-- **Pirmdienās 1 h sanāksme:**
-  1. Ko izdarījām?
-  2. Ko darām šonedēļ?
-  3. Kas traucē?
-- **Uzdevumu dēlis:** GitHub Projects. Katram uzdevumam ir viens atbildīgais.
-- **Lēmumi:** ierakstām PROJECT.md tajā pašā dienā.
-- **Izdevumu žurnāls (LU!):**
-  - mape `izdevumi/`: tabula (datums, kas, summa, BUDZETS.md pozīcija, kurš maksāja) un rēķinu PDF;
-  - rēķinu iegrāmatojam tajā pašā dienā, kad maksājam;
-  - mēneša beigās salīdzinām ar BUDZETS.md.
-- **Intervijas:**
-  - pieraksti uzreiz pēc sarunas pēc veidnes (6. sadaļa), mapē `intervijas/`;
-  - CMR foto glabājam mapē `cmr-paraugi/` (privāti, ar atļauju, nekādā gadījumā ne publiskā repo).
+- **Pirmdienās 1 h:** ko izdarījām, ko darām šonedēļ, kas traucē.
+- **Kopīgais darbu saraksts** ar atzīmēm: https://claude.ai/artifact/8Cufb9nBRmZk6ppiHixwkW (jāatjauno pēc šī plāna).
+- **Izdevumu žurnāls (LU!):** mape `izdevumi/` (tabula + rēķinu PDF). Iegrāmato tajā pašā dienā, katra mēneša beigās salīdzina ar BUDZETS.md.
+- **Intervijas:** pieraksts uzreiz pēc sarunas pēc veidnes (6. sadaļa), mapē `intervijas/` (nav repozitorijā, jo tajā ir personas dati).
 
-## 5. Posmi
+## 5. Posmi pa mēnešiem
 
-### 0. nedēļa: sagatavošanās (uzreiz pēc pieteikuma)
-- [ ] Privāts GitHub repo, uzdevumu dēlis, izdevumu žurnāls
-- [ ] Claude Max abiem (5x), Claude API konts ar kredītu
-- [ ] 40 pārvadātāju saraksts (6. sadaļa)
-- [ ] Abi piesakāmies LU stipendijai (€280/mēn.), ja atbilstam
+### 1. mēnesis: problēmas apstiprināšana
+- **Kontaktu saraksts:** 40 kontakti, gan pārvadātāji (5–100 auto, starptautiskie, īpaši Baltija–Ziemeļvalstis), gan ekspeditori.
+- **Intervijas:** 15 ar īpašniekiem, dispečeriem un grāmatvežiem. Pirmās 3 abi kopā.
+- **Dispečera vērošana:** vismaz 1–2 dienas pie dispečera. Pierakstām katru kravu: kas pienāk, cik laika katrs solis aizņem, kur dati tiek pārrakstīti.
+- **Paraugi:** savācam anonimizētus pieprasījumu e-pastus, cenu piedāvājumus un CMR foto, lai tos izmantotu prototipā.
+- **Mēneša beigās:** izvēlamies 1–2 MVP funkcijas (2. sadaļa). Ja intervijās neviens negrib maksāt, apstājamies un pārdomājam.
 
-### 1. mēnesis: validācija (klientu un tehniskā)
-- **15 intervijas** (~4 nedēļā), pārsvarā pa telefonu vai Teams. Pirmajās 10 produktu nerādām.
-- **Katrā intervijā palūdzam 2–3 parakstītu CMR foto** (var aizklāt cenas un vārdus). Mērķis ir 30 foto.
-- **Tehniskais tests (Roberts):**
-  - neliels skripts: CMR foto → Claude → strukturēti dati;
-  - salīdzina ar pareizajām vērtībām, ko ievadām ar roku;
-  - mēra precizitāti pa laukiem (sūtītājs, saņēmējs, vietas, datumi, krava, paraksts/zīmogs).
-- **Juridiskie jautājumi:** mentori un Datu valsts inspekcijas vadlīnijas. Tēmas: CMR foto satur trešo personu datus, vajag datu apstrādes vienošanos.
-- **Mēneša beigās:** abi lēmuma punkti (2. sadaļa).
+### 2. mēnesis: prototips
+- 1–2 izvēlētās funkcijas uz īstiem paraugiem.
+- Princips "cilvēks apstiprina": AI sagatavo, dispečers pārbauda un apstiprina.
+- Mēneša vidū iekšējais demo, beigās vienošanās ar 2–3 pilota pārvadātājiem.
 
-### 2. mēnesis: MVP
-Secība ir svarīga. Katrs solis ir lietojams pats par sevi:
-1. **Augšupielāde:** saite telefonā (PWA) → foto; vai e-pasta adrese, uz kuru pārsūta.
-2. **Nolasīšana:** Claude nolasa CMR → apstiprināšanas ekrāns (foto blakus laukiem, labošana ar 1 klikšķi).
-3. **Rēķins:**
-   - klienti un tarifi (fiksēta cena, par km vai par kravu);
-   - rēķina numerācija;
-   - PDF;
-   - eksports grāmatvedībai (Peppol BIS 3.0 XML un CSV). Vispirms tai programmai, ko lieto pirmais pilota klients.
-4. **Iekšējais demo mēneša vidū.** Mēneša beigās pirmais pilota klients sāk lietot rīku paralēli savam ierastajam procesam.
+### 3. mēnesis: testēšana ar 2–3 pārvadātājiem
+- Reālas kravas, paralēli ierastajam darbam.
+- Katru nedēļu saruna ar katru pilota klientu. Labojam to, kas traucē.
+- Mērām 3 rādītājus (1. sadaļa): pirms pilota un pilota laikā.
 
-### 3. mēnesis: pilots
-- 2–3 pārvadātāji ar reāliem pārvadājumiem. Katru nedēļu īsa saruna ar katru.
-- **Maksājumu uzraudzība:** termiņi, kavēto saraksts, automātiski atgādinājumi e-pastā.
-- **Mērām:**
-  - dienas no piegādes līdz rēķinam;
-  - minūtes vienam rēķinam;
-  - labotie lauki;
-  - vai lieto bez atgādināšanas.
-
-### 4. mēnesis: rezultāti un Demo diena
-- Naudas plūsmas pārskats (kas cik parādā, kas nāks nākamnedēļ).
-- Cenu sarunas → LOI vai priekšapmaksa.
-- Saruna ar rēķinu finansēšanas partneri (piem., Aria vai Latvijas faktoringa uzņēmums): vai viņus interesē mūsu dati.
-- Demo video: CMR foto → rēķins grāmatvedībā < 2 minūtēs.
-- Demo dienas prezentācija, LU atskaite, lēmums par turpinājumu.
+### 4. mēnesis: biznesa modelis un Demo diena
+- Cenu struktūra no pilota rezultātiem, piemēram, maksa par auto mēnesī vai par apstrādātu kravu. Sarunas par cenu ar pilota klientiem.
+- Biznesa modelis: kam pārdodam pirmos, kā, par cik, kas ir nākamās funkcijas.
+- Demo dienas prezentācija ar pilota skaitļiem, LU atskaite.
 
 ## 6. Intervijas
 
-### Kur atrast pārvadātājus
-1. **Personīgie kontakti:** radi, draugi, draugu uzņēmumi.
-2. **Grāmatveži, kas apkalpo pārvadātājus.** Viņi paši pārraksta CMR rēķinos un pazīst daudzus klientus.
-3. **firmas.lv / Lursoft:** NACE **49.41** (kravu autopārvadājumi), filtrs pēc darbinieku skaita.
-4. **Nozares asociācijas** (piem., "Latvijas Auto"), Facebook/LinkedIn loģistikas grupas.
-
-Sarakstā 40 kontakti, jo gaidām atsaucību ~40%.
+### Kur atrast
+1. Personīgie kontakti un paziņu uzņēmumi.
+2. Grāmatveži, kas apkalpo pārvadātājus.
+3. firmas.lv / Lursoft: NACE 49.41 (kravu autopārvadājumi) un 52.29 (ekspedīcija).
+4. Nozares asociācijas (piem., "Latvijas Auto"), loģistikas grupas Facebook/LinkedIn.
 
 ### Jautājumi (neko nepārdodam, jautājam par pagātni)
-1. Pastāstiet par pēdējo pārvadājumu no piegādes līdz naudai kontā. Kas notika katrā solī?
-2. **Kā parakstītais CMR nonāk birojā?** Oriģināls kopā ar šoferi, foto WhatsApp, e-pastā? Pēc cik dienām?
-3. Kas izraksta rēķinus? Kādā programmā? Cik minūšu aizņem viens? Cik rēķinu mēnesī?
-4. Cik ilgi parasti paiet no piegādes līdz rēķinam? Un līdz samaksai? Cik bieži klienti kavē?
-5. Kā šodien sekojat līdzi, kurš ir samaksājis? Kurš atgādina kavētājiem?
-6. **Kādus rīkus jau lietojat** (Mapon, TMS, Excel, WhatsApp, grāmatvedības programma)? Ko esat mēģinājuši un atmetuši? Kāpēc?
-7. Vai esat dzirdējuši par obligātajiem e-rēķiniem no 2028. gada? Ko plānojat darīt?
-8. Kas jūsu darbā šobrīd sāp visvairāk? (Ja atbilde nav par rēķiniem, tas ir svarīgi zināt!)
-9. *(Beigās)* Vai varat iedot 2–3 parakstītu CMR foto testam? (Cenas un vārdus var aizklāt.)
-10. *(Beigās)* Ja rēķins būtu gatavs 2 minūtes pēc CMR foto, vai izmēģinātu to 4 nedēļas bez maksas?
+1. Pastāstiet par pēdējo kravu no pieprasījuma līdz naudai kontā. Kas notika katrā solī?
+2. Kā pienāk kravu pieprasījumi (e-pasts, PDF, birža, telefons)? Kādās valodās? Cik dienā?
+3. Kā sagatavojat cenas piedāvājumu? Cik laika tas aizņem? Kā rēķināt nodevas un degvielu?
+4. Kā izvēlaties auto un vadītāju? Kā vadītājs saņem norādījumus?
+5. Kā parakstītais CMR nonāk birojā? Pēc cik dienām tiek izrakstīts rēķins? Cik ilgi līdz samaksai?
+6. Kādos formātos jāizraksta rēķini (Latvija, Norvēģija u.c.)? Vai esat dzirdējuši par e-rēķinu termiņiem?
+7. Kā sekojat darba laikam, kabotāžai, dienas naudai?
+8. Kādus rīkus jau lietojat (TMS, Mapon, kravu biržas, Excel, grāmatvedības programma)? Ko esat mēģinājuši un atmetuši? Kāpēc?
+9. Kurš no šiem soļiem jums sāp visvairāk? Cik tas izmaksā laikā vai naudā?
+10. *(Beigās)* Vai varam kādu dienu pavērot, kā strādā dispečers? Vai varat iedot dažus anonimizētus paraugus?
 
 ### Pieraksta veidne
-- **Uzņēmums, auto skaits, kas runāja (loma).** **Rīki:** __
-- **CMR ceļš uz biroju:** __. **Dienas līdz rēķinam:** __. **Minūtes vienam rēķinam:** __
+- **Uzņēmums, auto skaits, virzieni, kas runāja (loma).** **Rīki:** __
+- **Kravas ceļš un laiks katrā solī:** __
 - **3 lielākās sāpes (citāti):**
-- **CMR foto iedoti:** jā/nē (cik). **Pilotam:** jā / varbūt / nē. **Nākamais solis:**
+- **Gatavība maksāt / pilotam:** jā / varbūt / nē. **Nākamais solis:**
 
-## 7. Tehniskie principi
+## 7. Tehniskie principi (no anketas)
 
-- **Izvēlamies to, ko jau protam.** Ieteikums: TypeScript, viens tīmekļa ietvars (piem., Next.js), PostgreSQL, Docker uz viena servera ES.
-- **Viens serveris, viena datubāze, viens repo.** Nekādu mikroservisu.
-- **AI:**
-  - **Modelis:** Claude API ar attēlu analīzi. Pēc noklusējuma lielākais pieejamais modelis (Claude Opus 5).
-  - **Izmaksas:** ~$0,06 par CMR (pārbaudīts 23.09.2026.).
-  - **Rezultāts:** strukturēti dati pēc shēmas. Cilvēks **vienmēr** apstiprina, pirms rēķins aiziet.
-- **Neveidojam paši to, kas jau eksistē:**
-  - e-rēķinu nosūtīšana → grāmatvedības programma;
-  - e-CMR → esošās platformas;
-  - GPS un šofera lietotne → Mapon u.c.;
-  - finansēšana → partneris.
-- **Dati:**
-  - CMR foto satur personas datus, tāpēc glabājam ES;
-  - šifrēts savienojums, piekļuve pēc lomām, ikdienas rezerves kopijas;
-  - CMR paraugi nekad nenonāk publiskā repo.
+- **LLM** pieprasījumu, e-pastu un dokumentu nolasīšanai dažādās valodās. **Attēlu atpazīšana** papīra CMR foto.
+- **Karšu un ceļu nodevu datu pakalpojumi** maršrutam un izmaksām. **Optimizācija** auto piešķiršanai (tikai ja to izvēlamies MVP).
+- **Integrācijas** ar e-pastu, telemātiku, kravu biržām, grāmatvedības programmām (kur pieejamas).
+- **E-rēķini:** Peppol BIS Billing 3.0 un Norvēģijas EHF, caur sertificētu Peppol pakalpojumu sniedzēju.
+- **Mobilā tīmekļa lietotne** vadītājiem bez instalēšanas. **Mākonis ES**, VDAR.
+- **Cilvēks apstiprina:** AI sagatavo, lēmumu pieņem dispečers.
+- **Izvēlamies to, ko jau protam:** viens repozitorijs, viens serveris, viena datubāze.
 
 ## 8. Riski
 
-| Risks | Pazīme | Ko darām |
-|---|---|---|
-| Sāpe nav pietiekami liela | "Rēķinus izrakstām piektdienās, viss ok" | Klientu lēmuma punkts. Meklējam lielāko sāpi (piem., kavētie maksājumi) |
-| AI slikti lasa rokrakstu | < 90% laukos | "Palīgs ievadei" režīms. Uzlabojam foto kvalitātes norādes |
-| Pārvadātāji jau lieto Planlogi, Mapon u.c. ar rēķiniem | Intervijās bieži min šos rīkus | Mērķējam uz tiem, kam TMS nav. Izvērtējam integrāciju ar Mapon, nevis konkurenci |
-| Grāmatvedības programmu dažādība | Katram klientam cita | Standarta Peppol XML + CSV. Integrācijas tikai pilota klientu programmām |
-| Valsts e-CMR (LVRTC) sāk darboties | Ziņas SAM/LVRTC | Mums tas ir vēl viens avots, ko nolasīt. Rēķins un samaksa paliek mūsu daļa |
-| Laiks: divi cilvēki, 4 mēneši | Nedēļas mērķi netiek izpildīti 2× pēc kārtas | Griežam funkcijas, nevis kvalitāti |
+| Risks | Ko darām |
+|---|---|
+| Pilnu TMS jau piedāvā Planlogi (Igaunija), Mapon (Rīga), Dashdoc u.c. | Žūrijai skaidri pasakām atšķirību: AI automatizācija, nevis datu ievade; Baltija–Ziemeļvalstis ar e-rēķinu formātiem. Pārbaudām intervijās, ko viņi jau lieto |
+| 6 funkcijas ir par daudz 2 cilvēkiem 4 mēnešos | MVP = tikai 1–2 funkcijas, pārējais ir ceļa karte |
+| Intervijās neviens negrib maksāt | Lēmums 1. mēneša beigās, pirms būvējam |
+| AI slikti lasa rokrakstu vai netipiskus e-pastus | "Cilvēks apstiprina" un testi uz īstiem paraugiem 1.–2. mēnesī |
+| Norvēģijas EHF un Peppol pakalpojuma izmaksas | Pilotā pietiek ar PDF + eksportu. Peppol sniedzēju izvēlamies, kad ir klients, kam tas vajadzīgs |
 
 ## 9. Ko programmas laikā NEDARĀM
 
-- **Kodolam nevajadzīgais:**
-  - dispečera panelis;
-  - šofera lietotne ar GPS;
-  - savs e-CMR;
-  - sava e-rēķinu nosūtīšana (Peppol piekļuves punkts).
-- **Plašākas TMS funkcijas:**
-  - maršruti;
-  - ceļa nodevas;
-  - tahogrāfs;
-  - dienas nauda;
-  - CO2 atskaites;
-  - klientu portāls;
-  - rentabilitātes analītika;
-  - dzelži (GPS/kameras kaste).
-- **Finanšu partnera darbs:** paša rēķinu finansēšana.
-
-Tas viss paliek pieteikumā kā **ceļa karte**. Sākam ar vienu lietu un izdarām to labi.
+- Visas 6 platformas daļas.
+- Savu Peppol piekļuves punktu.
+- eFTI sertifikāciju.
+- Dzelžus.
+- Sadarbības vidi ekspeditoriem un nosūtītājiem (ilgtermiņa vīzija anketā).
