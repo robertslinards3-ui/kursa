@@ -19,6 +19,7 @@ dispečera ikdienas darbu.
 ### Pilni TMS mazajiem pārvadātājiem (tiešā konkurence sākotnējai idejai)
 | Produkts | Valsts | Ko dara | Cena |
 |---|---|---|---|
+| **Ybil** (ybil.io) | Igaunija | digiCMR (e-CMR, QR paraksts bez konta, foto), TMS ar "AI dispečerizāciju" un rēķinu pēc piegādes, bezmaksas šofera lietotne, REST API. 105 pārvadātāji, eFTI4EU Baltijas koridora pilots (EE–LV–LT), €150k no LatBAN (TechChill Rīgā, 03.2026) | pēc pieprasījuma, pēc auto parka lieluma |
 | **Planlogi** | Igaunija | TMS 5–100 auto parkam: dispečera panelis, e-CMR, šofera lietotne, ePOD, rēķins no izpildīta pasūtījuma | no €79/mēn. vai €45 par dispečera vietu |
 | **Dashdoc** | Francija | TMS 5–50 auto parkam, e-CMR, rēķini | pēc pieprasījuma |
 | **Impargo** | Vācija | TMS 10–50 auto parkam, ceļa nodevas, rēķini | publicēta |
@@ -51,6 +52,33 @@ dispečera ikdienas darbu.
 ### Rēķinu finansēšana
 - **Kas ir:** **Aria** jau piedāvā naudu ~24 h laikā pēc parakstītas e-CMR, integrējoties ar TMS caur API.
 - **Ko tas nozīmē mums:** finansēšanu nebūvējam paši. Nākotnē to var pieslēgt kā partneri. Tas ir MoneyLab virziens.
+
+## Ybil: tuvākais konkurents (izpēte 2026-10-19)
+
+Igaunijas uzņēmums (Ybil OÜ, Tallina, dibināts 2023). Dibinātājs Oliver Tatar ir 27 gadus strādājis ekspedīcijā Baltijā un Ziemeļvalstīs (ATV Transport). Komandā ~9 cilvēki.
+
+**Ko viņi dara labi:**
+- **Sāk ar atbilstību, tad paplašina.** digiCMR pārdod atsevišķi, TMS pievieno vēlāk ("land with compliance, expand to operations").
+- **QR paraksts bez konta.** Sūtītājs un saņēmējs paraksta savā telefonā, noskenējot QR kodu, un viņiem nav jāreģistrējas.
+- **Foto un audita pieraksts** iekraušanā un izkraušanā. Tas ir pierādījums strīdos par bojājumiem.
+- **Integrējas, nevis aizstāj.** REST API, webhooks, sandbox, 30+ integrācijas (Merit Aktiva, Salesforce, Shopify), telemātika (Mapon, ecofleet).
+- **Skaitļi mājaslapā:** 3 min pret 20+ min uz pavadzīmi, 60% mazāk administratīvā laika.
+- **Pārdošana caur grantu.** Palīdz Igaunijas klientiem saņemt RTE grantu (50%, līdz €5 000). Palīdzējuši 30+ uzņēmumiem.
+- **Satura mārketings:** eFTI 2027 lapa, blogs par e-CMR un Spānijas DeCA.
+- **Uzticamība:** dibinātājs no nozares, eFTI pilots, LatBAN investīcija.
+
+**Kur ir vieta Kursai (pēc viņu mājaslapas, jāpārbauda demo):**
+- Pasūtījumi pie viņiem nāk "manuāli vai caur API". **AI e-pastu un PDF nolasīšana** nav minēta.
+- Tikai digitāls CMR. **Papīra CMR foto nolasīšana** tiem, kas uz e-CMR nepāriet, nav minēta.
+- "Automātiski rēķini", bet **e-rēķinu formāti (LV Peppol, NO EHF)** nav minēti.
+- Šofera lietotne ir igauņu, angļu un somu valodā. **Latviešu, lietuviešu un krievu valodas** nav.
+- Cenas aprēķins ar ceļa nodevām nav minēts.
+
+**Iespēja:** viņiem ir integrāciju partneru programma un atvērts API. Kursa varētu būt AI slānis (pasūtījumu nolasīšana un e-rēķini), kas strādā kopā ar Ybil e-CMR, nevis būvē savu e-CMR.
+
+**Uzmanību:** viņu mārketingā rakstīts, ka eFTI "padara digitālos dokumentus obligātus". Tas ir pārspīlēts. Pat viņu eFTI lapā rakstīts, ka regula "nepiespiež pāriet uz digitālu". Mēs šo apgalvojumu nekopējam.
+
+Avoti: [ybil.io](https://ybil.io), [TMS](https://ybil.io/products/tms), [digiCMR](https://ybil.io/products/digicmr), [Šofera lietotne](https://ybil.io/products/driver), [Integrācijas](https://ybil.io/industries/integration-partners), [Par mums](https://ybil.io/about), [Cenas](https://ybil.io/pricing), [eFTI 2027](https://ybil.io/efti-2027)
 
 ## Pārbaudītie fakti, uz kuriem balstāmies
 

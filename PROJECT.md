@@ -53,7 +53,7 @@ delivery to invoice.
 
 ## Before the deadline (2026-09-27)
 
-- [x] Team name — **Kursa**; track Idea to Impact; RIS3 ICT (in the form)
+- [x] Team name — **Kursa**; applied for Idea to Impact, placed by LU in MoneyLab; RIS3 ICT (in the form)
 - [x] Personal data for both members (in the form)
 - [ ] Form: **Kompetences, Pienākumi komandā, Motivācija, Ietekme uz izaugsmi** — empty for both
 - [ ] Form: **Darba grafiks** (months 1–4, individual goals per member) — empty

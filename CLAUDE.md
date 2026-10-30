@@ -4,10 +4,19 @@ Read this first, every session.
 
 ## What stage this project is at
 
-**Pre-code.** Right now this folder is a decision record, an execution plan and a budget —
-nothing to run yet. Read [`PROJECT.md`](PROJECT.md) first, every time — it has the current
-decision, the v1 scope cut, the open TODOs, and the validation gate. Don't assume yesterday's
-plan is still today's plan without checking it.
+**Accepted, in execution — not applying anymore.** Team Kursa was accepted into the LU ERAF
+Pirmsinkubācijas programme. The team ticked "Idea to Impact" in the form, but LU **placed it in
+the MoneyLab track** (thematic fintech pre-incubation) — use MoneyLab in stipend applications,
+reports and anything LU-facing. The 4-month execution period runs
+**2026-10-27 → ~2027-02-18**. Read [`PROGRAMME.md`](PROGRAMME.md) first for what the
+programme now requires (reporting cadence, stipend process, Demo Day, who to contact) — it's
+a condensed, agent-facing summary of the full nolikums (also in this folder as a PDF). Then
+read [`PROJECT.md`](PROJECT.md) for the product decision, v1 scope, and open TODOs; its
+"Before the deadline" section is now historical (the deadline has passed) — don't act on it
+as if it's still pending.
+
+Pre-code still applies to the *product*: this folder is a decision record, execution plan and
+budget, nothing to run yet.
 
 The folder name `ops-panel` is historical — see below.
 
@@ -15,7 +24,7 @@ The folder name `ops-panel` is historical — see below.
 
 Team **Kursa** — **Roberts Linards** (the user, LU E-Bizness) and **Roberts Kaņepons** (partner,
 aka "Matjas", GitHub Matjas01, LU Finanšu menedžments) — applying to the LU 4-month
-pre-incubation programme, track **"Idea to Impact"**, funding up to €3,506 per team,
+pre-incubation programme (applied for "Idea to Impact", placed in **MoneyLab**), funding up to €3,506 per team,
 deadline 2026-09-27 23:59.
 
 **The founders' own form [`Kursa_PieteikumaAnketa.docx`](Kursa_PieteikumaAnketa.docx) is the source
@@ -53,15 +62,24 @@ keep the rule: every expense needs a receipt/invoice in the team's expense log).
 
 ## Relationship to DroneSim
 
-[`../DroneSim/`](../DroneSim/) is a separate project (EUDIS hackathon) with the same partner.
+[`../DroneSim/`](../DroneSim/) is a separate project for the upcoming EUDIS hackathon (it has **not happened yet** — never
+describe it as past experience) with the same partner.
 It mattered for Option B (MAVLink/ArduPilot). It has little technical overlap with the freight
 platform — don't merge work between them without asking.
+
+## Session log — update at the end of every session
+
+[`ZINASANAS.md`](ZINASANAS.md) (Latvian) is the team's knowledge base: a summary on top, an
+append-only session log at the bottom. Before finishing any session where something was
+learned, decided or changed, append a dated entry to the log (what was done, what was learned,
+what's still open) and update the summary sections it affects. Never put personal data
+(personal code, IBAN, address) there.
 
 ## Working conventions
 
 - Language: the user writes in Latvian. `PROJECT.md` and this file are in English;
   team/LU-facing documents (`PLAN.md`, `BUDZETS.md`) are in Latvian.
-- Local git repo exists; no GitHub remote yet (waiting for the user to create a private repo).
+- Git remote: private GitHub repo robertslinards3-ui/kursa (created 2026-10-30). The user works from more than one device: `git pull` before editing, commit and push after. Personal data (CV, filled forms with personal codes) stays out via .gitignore.
 - Keep `PROJECT.md`'s checkboxes and open questions current.
 - Scope discipline: the MVP is 1–2 of the form's six functions, not the platform. Weigh new
   scope against "two people, 4 months" and against what competitors already do (TIRGUS_IZPETE.md).

@@ -9,3 +9,10 @@ __pycache__/
 # Future: real CMR photos contain personal data - never commit them
 cmr-paraugi/
 izdevumi/
+
+# Personal documents (CV etc.) - never commit
+*CV*.pdf
+*CV*.docx
+
+# Filled-in forms with personal codes - never commit
+C_dalas_iesniegums_aizpildits.*

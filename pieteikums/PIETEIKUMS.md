@@ -50,7 +50,7 @@ Mērķi četru mēnešu programmā:
 - izpētījuši konkurentus Latvijā, Baltijā un ES. Tāpēc arī sašaurinājām produktu līdz daļai, ko neviens nedara;
 - sagatavojuši MVP apjomu un divus lēmuma punktus: klientu un tehnisko.
 
-Intervijas un programmēšana vēl nav sāktas. Tās ir programmas pirmais darbs. Komandai ir pieredze ātru prototipu izstrādē hakatonā (EUDIS).
+Intervijas un programmēšana vēl nav sāktas. Tās ir programmas pirmais darbs.
 
 **Potenciāls:**
 - **Ieņēmumi.** Latvijā ir ~22 000 licencētu kravas auto. Plānotā cena ir €15–25 par auto mēnesī vai maksa par apstrādātu CMR. Jau 1% tirgus (~220 auto) dod ~€40 000–66 000 gadā, un ieņēmumi ir regulāri.
@@ -138,7 +138,7 @@ Neesam pārliecināti, ka problēma ir pietiekami sāpīga, lai par to maksātu.
 - Telefona numurs: [TELEFONS]
 - Mācību virziens: [PROGRAMMA]
 - E-pasts: [E-PASTS]
-- Kompetences: Programmatūras izstrāde un sistēmu integrācija. Pieredze EUDIS hakatonā: simulācijas vide ar ArduPilot un MAVLink protokolu. [PAPILDINĀT: valodas, ietvari, citi projekti]
+- Kompetences: Programmatūras izstrāde un sistēmu integrācija. [PAPILDINĀT: valodas, ietvari, citi projekti]
 - Pienākumi komandā: Tehnoloģijas. Sistēmas arhitektūra, serveris un datubāze, CMR foto augšupielāde un nolasīšana ar AI, nolasīšanas precizitātes testēšana, drošība un rezerves kopijas, izvietošana.
 - Motivācija: [PIELĀGOT] Gribu būvēt programmatūru, ko reāli cilvēki izmanto ikdienas darbā, nevis tikai demonstrācijai. Loģistikā ir daudz papīra darba, un mūsdienu AI to var automatizēt.
 - Ietekme uz profesionālo izaugsmi: [PIELĀGOT] Pieredze pilna cikla produkta izstrādē ar reāliem klientiem un praktiska AI (attēlu analīzes) izmantošana ražošanas vidē. Darbs ar ES standartiem (e-rēķini) un datu aizsardzības prasībām.
