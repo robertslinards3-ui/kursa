@@ -84,6 +84,8 @@ Kurš galvenokārt programmē, jāizlemj jums abiem. No tā atkarīgs arī Claud
 3. firmas.lv / Lursoft: NACE 49.41 (kravu autopārvadājumi) un 52.29 (ekspedīcija).
 4. Nozares asociācijas (piem., "Latvijas Auto"), loģistikas grupas Facebook/LinkedIn.
 
+> Pilns intervijas scenārijs ar ievadu, jautājumiem ekspeditoriem un grāmatvežiem un pieraksta veidni ir [INTERVIJAS.md](INTERVIJAS.md). Zemāk ir sākotnējais īsais saraksts.
+
 ### Jautājumi (neko nepārdodam, jautājam par pagātni)
 1. Pastāstiet par pēdējo kravu no pieprasījuma līdz naudai kontā. Kas notika katrā solī?
 2. Kā pienāk kravu pieprasījumi (e-pasts, PDF, birža, telefons)? Kādās valodās? Cik dienā?

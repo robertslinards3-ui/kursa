@@ -16,3 +16,6 @@ izdevumi/
 
 # Filled-in forms with personal codes - never commit
 C_dalas_iesniegums_aizpildits.*
+
+# Interview notes contain personal data - never commit
+intervijas/

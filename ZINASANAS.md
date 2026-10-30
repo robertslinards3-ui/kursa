@@ -143,3 +143,7 @@ Pēc katras sesijas jāpievieno jauns ieraksts. Formāts: datums, kas izdarīts,
 - Atvērts: 2.–4. mēneša grafiks.
 - Izveidots privāts GitHub repozitorijs https://github.com/robertslinards3-ui/kursa, lai var strādāt no vairākām ierīcēm. Pirms darba `git pull`, pēc darba commit un push. CV un aizpildītās veidlapas ar personas kodu netiek augšupielādētas (.gitignore).
 - Linards nosūtīja labotu anketu (termiņš 01.11.) un savu stipendijas pieteikumu (termiņš 13.11.).
+
+### 2026-10-30: intervijas jautājumi
+- Izveidots INTERVIJAS.md: intervijas scenārijs (28 jautājumi, ★ ir īsā versija), atsevišķi jautājumi ekspeditoriem un grāmatvežiem, pieraksta veidne. Pievienota MoneyLab daļa: apmaksas termiņi, kavējumi, faktorings, e-rēķini. `intervijas/` ir .gitignore.
+- Atvērts: pēc 3 intervijām pārskatīt jautājumus. Tulkojums krievu valodā?
