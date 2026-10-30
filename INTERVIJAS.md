@@ -61,7 +61,7 @@ Versija 1, 2026-10-30. Pēc pirmajām 3 intervijām jautājumus pārskatām: lie
 
 ## F. Rīki un izmēģinātais
 
-20. ★ Kādas programmas lietojat: TMS, telemātiku (Mapon u. c.), grāmatvedību (Horizon, Jumis, Tildes Jumis, Merit), Excel?
+20. ★ Kādas programmas lietojat: TMS, telemātiku (Mapon u. c.), grāmatvedību (Horizon, Tildes Jumis, Merit Aktiva), Excel?
 21. Ko esat izmēģinājuši un atmetuši? Kāpēc?
 22. Cik šobrīd maksājat par programmām mēnesī (aptuveni)?
 
