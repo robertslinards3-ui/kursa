@@ -142,3 +142,4 @@ Pēc katras sesijas jāpievieno jauns ieraksts. Formāts: datums, kas izdarīts,
 ### 2026-10-30: 1. mēneša darba grafiks
 - Valodas labojumi 1. mēneša uzdevumiem. Uzdevumi sadalīti pa cilvēkiem (sk. 2. sadaļu). Izveidots šis fails.
 - Atvērts: 2.–4. mēneša grafiks.
+- Izveidots privāts GitHub repozitorijs https://github.com/robertslinards3-ui/kursa, lai var strādāt no vairākām ierīcēm. Pirms darba `git pull`, pēc darba commit un push. CV un aizpildītās veidlapas ar personas kodu netiek augšupielādētas (.gitignore).
