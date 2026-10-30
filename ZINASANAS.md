@@ -113,7 +113,6 @@ Personas datus (personas kodu, IBAN, adresi) šeit neglabājam.
 
 ## 8. Atvērtie jautājumi
 
-- Kas jālabo anketā līdz 01.11.? Vai jāmaina atzīmētais virziens uz MoneyLab?
 - Kā sauc darba vadītāju?
 - Vai Kaņepons arī piesakās stipendijai?
 - Kuras 1–2 funkcijas būs MVP? Izlems pēc intervijām.
@@ -143,3 +142,4 @@ Pēc katras sesijas jāpievieno jauns ieraksts. Formāts: datums, kas izdarīts,
 - Valodas labojumi 1. mēneša uzdevumiem. Uzdevumi sadalīti pa cilvēkiem (sk. 2. sadaļu). Izveidots šis fails.
 - Atvērts: 2.–4. mēneša grafiks.
 - Izveidots privāts GitHub repozitorijs https://github.com/robertslinards3-ui/kursa, lai var strādāt no vairākām ierīcēm. Pirms darba `git pull`, pēc darba commit un push. CV un aizpildītās veidlapas ar personas kodu netiek augšupielādētas (.gitignore).
+- Linards nosūtīja labotu anketu (termiņš 01.11.) un savu stipendijas pieteikumu (termiņš 13.11.).

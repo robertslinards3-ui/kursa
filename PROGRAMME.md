@@ -35,11 +35,11 @@ vadītājs.
 
 ## Immediate to-dos (from the kickoff deck, still open as of 2026-10-28)
 
-- [ ] **Fix the application form** per LU's corrections, due 2026-11-01 (deck: "Izlabot
+- [x] **Fix the application form** (done by the team, reported 2026-10-30) per LU's corrections, due 2026-11-01 (deck: "Izlabot
   pieteikuma veidlapas") — ask the user what LU flagged; likely touches
   `Kursa_PieteikumaAnketa.docx`.
 - [ ] Join the track's WhatsApp group (MoneyLab — confirm which group LU means).
-- [ ] Decide whether to apply for the individual monthly stipend — deadline **2026-11-13**,
+- [x] Roberts Linards sent his stipend application (reported 2026-10-30). Decide whether to apply for the individual monthly stipend — deadline **2026-11-13**,
   60 stipends of €280/month awarded competitively (see below).
 
 ## Key dates
